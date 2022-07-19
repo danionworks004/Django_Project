@@ -1,0 +1,253 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Website Kami</title>
+    
+   
+</head>
+<body>
+    
+    <header>
+        
+        <center><img id="gambar" src="{% static gambar %}" alt="logo"></center>
+        <h1><marquee >Selamat datang diprofil kami</marquee></h1>
+        <div class="te"><h2>Halaman {{judul}}</h2></div>
+       
+        <nav>
+            <ul>
+                <!--templates tags-->
+                {% for link,name in nav %}
+                <li>
+                    <a href="{{link}}"> {{name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        
+        <di class="ta">
+        <h3>{{ sub_judul}}</h3>
+        </di>
+
+    </header>
+    
+    <p></p>
+   <ul>
+    <li>
+        <div class="card">
+            <img src="{% static profile1 %}">
+            <h4>{{nama1}}</h4>
+            <h4>{{nim1}}</h4>
+            <h4>{{kelas1}}</h4>
+            <button class="button button-1"><a href="https://www.instagram.com/andreas232744/">Get Link Instagram</a></button>
+        
+        </div>
+    </li>
+    <li>
+        <div class="card">
+            <img src="{% static profile2 %}">
+            <h4>{{nama2}}</h4>
+            <h4>{{nim2}}</h4>
+            <h4>{{kelas2}}</h4>
+            <button class="button button-1"><a href="https://www.instagram.com/daninugroho.w/">Get Link Instagram</a></button>          
+        </div>
+    </li>
+    <li>
+        <div class="card">
+            <img src="{% static profile3 %}">
+            <h4>{{nama3}}</h4>
+            <h4>{{nim3}}</h4>
+            <h4>{{kelas3}}</h4>
+            <button class="button button-1"><a href="https://www.instagram.com/zulfia.mu/">Get Link Instagram</a></button>
+            
+
+        </div>
+    </li>
+    <li>
+        <div class="card">
+            <img src="{% static profile4 %}">
+            <h4>{{nama4}}</h4>
+            <h4>{{nim4}}</h4>
+            <h4>{{kelas4}}</h4>
+            <button class="button button-1"><a href="https://www.instagram.com/aluta.nel.02/">Get Link Instagram</a></button>
+           
+
+            
+
+        </div>
+    </li>
+    
+    </ul>
+    
+</body>
+<footer>
+    <p>Project UAS Bahasa Pemrograman Kelompok 14</p>
+    <p>@copyright2022</p>
+</footer>
+</html>
+
+
+
+
+
+
+
+
+
+<style>
+    header {
+    margin: 0;
+   
+}
+.te {
+    background-color:darkred;
+    text-align: center;
+    color:white
+}
+
+.ta h3 {
+    text-align: center;
+}
+
+#gambar {
+   width:80%;
+   height:10%;
+
+
+}
+
+body {
+    background-color: white   ;
+
+
+}
+.newbutton {
+  background-color: darkred;
+  border: none;
+ 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.newbutton a {
+    text-decoration: none;
+    text-align: center;
+    background-color: white;
+}
+.newbutton-1 {
+    background-color: white;
+  color: black;
+  border: blue
+}
+.ta h3{
+    text-align: center;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.button-1 {
+    background-color: aqua;
+}
+
+.te h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 39px;
+}
+nav a{
+    color:white;
+    display: block;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 12px 12px;
+    text-decoration:none;
+}
+nav ul {
+    background-color: darkred;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+nav li {
+    float: left;
+}
+nav a{
+    color:white;
+    display: block;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 12px 12px;
+    text-decoration:none;
+}
+nav a{
+    font-weight: bold;
+    font-size: 30px;
+}
+footer{
+    background-color: darkred;
+    margin: 0;
+    text-align: center;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+.card img{
+    object-fit: cover;
+    width: 70%;
+    height: 900%;
+
+}
+.card{
+  box-shadow:blue,blue;
+  max-width: 300px;
+  max-height: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.card h4{
+    object-fit: cover;
+    text-align: center;
+}
+ul {
+    background-color: white;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+    float: left;
+}
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+
+}
+</style>

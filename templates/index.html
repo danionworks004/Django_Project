@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kelompok 14</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<br/>
+	<br/>
+	<marquee><h2>SELAMAT DATANG DI WIBESITE KELOMPOK KAMI </h2></marquee>	
+	<br/>
+	<div class="login">
+	<br/>
+		<form action="{{btn}}" method="post" onSubmit="return validasi()">
+			<center><div>
+				<label>Username:</label>
+				<input type="text" name="username" id="username" />
+			</div>
+			</center>
+			<center>
+			<div>
+				<label>Password:</label>
+				<input type="password" name="password" id="password" />
+			</div>	
+			</center>		
+			<center>
+			<div>
+				<input type="submit" value="Login" class="tombol">
+                
+			</div>
+			</center>
+
+		</form>
+	</div>
+   
+
+</body>
+ 
+<script type="text/javascript">
+	function validasi() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;		
+		if (username != "" && password!="") {
+			return true;
+		}else{
+			alert('Username dan Password harus di isi !');
+			return false;
+		}
+        
+	}
+ 
+</script>
+	</body>
+	</html>
+<style>
+ body{
+ background: rgb(255, 78, 78);
+ color: white;
+    
+    font: 1,2em sans-serif;
+  }
+   
+  h2 {
+    color:orangered;
+  }
+   
+  .login {
+    padding: 1em;
+    margin: 2em auto;
+    width: 17em;
+    background: orangered;
+    border-radius: 3px;
+  }
+   
+  label {
+    font-size: 10pt;
+    color: black;
+  }
+   
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    padding: 8px;
+    width: 95%;
+    background: white;
+    border: 0;
+    font-size: 10pt;
+    margin: 6px 0px;
+  }
+   
+  .tombol {
+    background: #000;
+    color: white;
+    border: 0;
+    padding: 5px 8px;
+    margin: 20px 0px;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: black;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+a input{
+    background: transparent;
+    color: #03e9f4;
+    border-style: none;
+    font-size: 24px;
+}
+a input:hover{
+    
+    background: cyan;
+    color: cyan;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,blue);
+    animation: animate1 0.5s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }50%,100%{
+        left: 100%;
+    }
+}
+
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,magenta);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,blue);
+    animation: animate3 0.5s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3 {
+    0%{
+        right: -100%;
+    }50%,100%{
+        right: 100%;
+    }
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(270deg,transparent,orange);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate4 {
+    0%{
+        bottom: -100%;
+    }50%,100%{
+        bottom: 100%;
+    }
+
+}
+</style>
